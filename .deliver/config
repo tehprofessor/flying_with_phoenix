@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
+SSH_TIMEOUT=30
 
 APP="flying_with_phoenix" # name of your phoenix application release, see mix.exs
 
 # Use ssh alias as below, IP, or FQDN
 BUILD_HOST="super-secret-build-server" # host where to build the release
 BUILD_USER="fwp" # local user at build host
-BUILD_AT="/tmp/flying_with_phoenix" # build directory on build host
+BUILD_AT="/home/fwp/builds/flying_with_phoenix" # build directory on build host
 
 # Use ssh alias as below, IP, or FQDN
 PRODUCTION_HOSTS="super-secret-production-server"
 PRODUCTION_USER="production" # local user at deploy hosts
-DELIVER_TO="/home/fwp/flying_with_phoenix" # deploy directory on production hosts
+
+DELIVER_TO="/home/fwp/deploy/flying_with_phoenix" # deploy directory on production hosts
