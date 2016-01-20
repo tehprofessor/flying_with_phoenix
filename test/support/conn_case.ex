@@ -27,6 +27,8 @@ defmodule FlyingWithPhoenix.ConnCase do
 
       import FlyingWithPhoenix.Router.Helpers
 
+      import Tacos
+
       # The default endpoint for testing
       @endpoint FlyingWithPhoenix.Endpoint
     end

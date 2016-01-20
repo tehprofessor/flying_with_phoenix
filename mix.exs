@@ -46,7 +46,11 @@ defmodule FlyingWithPhoenix.Mixfile do
       {:phoenix_live_reload,            "~> 1.0",
         only: :dev                                                            },
       {:gettext,                        "~> 0.9"                              },
-      {:cowboy,                         "~> 1.0"                              }
+      {:cowboy,                         "~> 1.0"                              },
+      # Simple libary for JSON fixtures...
+      {:tacos,                          "~> 0.0.1",
+      # Github is a supported source! Makes things easy, eh?
+        github: "simble-app/tacos"                                            }
     ]
   end
 
