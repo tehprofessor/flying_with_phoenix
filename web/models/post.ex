@@ -7,7 +7,7 @@ defmodule FlyingWithPhoenix.Post do
     field :title, :string, default: ""
     field :body, :string, default: ""
 
-    belongs_to :user, User
+    belongs_to :user, User, references: :id, type: :binary_id
 
     timestamps
   end

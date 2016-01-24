@@ -2,7 +2,8 @@ defmodule FlyingWithPhoenix.Repo.Migrations.CreateUser do
   use Ecto.Migration
 
   def change do
-    create table(:users) do
+    create table(:users, primary_key: false) do
+      add :id, :uuid, primary_key: true, default: fragment("uuid_generate_v4()")
       # No default, will error unless set
       add :email, :string, null: false
       # Null is baaad.

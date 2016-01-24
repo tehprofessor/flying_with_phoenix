@@ -3,7 +3,7 @@ defmodule FlyingWithPhoenix.PostTest do
 
   alias FlyingWithPhoenix.Post
 
-  @valid_attrs tacos("post") |> Map.merge(%{"user_id" => 1})
+  @valid_attrs tacos("post") |> Map.merge(%{"user_id" => Ecto.UUID.generate})
   @invalid_attrs %{}
 
   test "changeset with valid attributes" do

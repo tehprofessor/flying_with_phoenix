@@ -10,7 +10,7 @@ defmodule FlyingWithPhoenix.Repo.Migrations.CreatePost do
       # - and -
       # Use :delete_all to prevent orphaned posts when a user is deleted.
       # It's recommended to set this here, instead of in the model.
-      add :user_id, references(:users, on_delete: :delete_all)
+      add :user_id, references(:users, type: :binary_id, on_delete: :delete_all)
 
       timestamps
     end
